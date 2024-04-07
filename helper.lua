@@ -24,4 +24,11 @@ function helper:hex(hex_code)
     return self:rgb(r, g, b)
 end
 
+function helper:colors()
+    return {
+        phthalo_green = self:hex("#123524"),
+    }
+    
+end
+
 return helper
