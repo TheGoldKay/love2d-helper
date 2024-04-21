@@ -21,12 +21,13 @@ function helper:hex(hex_code)
     local g = tonumber(hex_code:sub(3, 4), 16)
     local b = tonumber(hex_code:sub(5, 6), 16)
     
+    -- use the build-in rgb function for love2d convertion
     return self:rgb(r, g, b)
 end
 
 function helper:colors()
     return {
-        phthalo_green = self:hex("#123524"),
+        phthalo_green = self:hex("#123524"), -- strong mossy dark shade of green
     }
     
 end
