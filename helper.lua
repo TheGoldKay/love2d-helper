@@ -25,8 +25,13 @@ function helper:hex(hex_code)
     return self:rgb(r, g, b)
 end
 
+-- add new colors as needed
 helper.colors = {
     phthalo_green = helper:hex("#123524"), -- strong mossy dark shade of green
 }
+
+function helper:get_color(color)
+    return self.colors[color]
+end
 
 return helper
