@@ -1,10 +1,10 @@
-local helper = {}
+local color = {}
 
 --[[
-Personal helper module crafted with love2d game development in mind
+Personal color module crafted with love2d game development in mind
 ]]
 
-function helper:rgb(r, g, b)
+function color:rgb(r, g, b)
     -- convert from rbg (0 - 255) to love2d (0 - 1)
     if type(r) == 'table' then 
         r, g, b = unpack(r)
@@ -12,7 +12,7 @@ function helper:rgb(r, g, b)
     return {r / 255, g / 255, b / 255}
 end
 
-function helper:hex(hex_code)
+function color:hex(hex_code)
     -- Remove the "#" symbol if present
     hex_code = hex_code:gsub("#", "")
     
@@ -26,12 +26,12 @@ function helper:hex(hex_code)
 end
 
 -- add new colors as needed
-helper.colors = {
-    phthalo_green = helper:hex("#123524"), -- strong mossy dark shade of green
+color.colors = {
+    phthalo_green = color:hex("#123524"), -- strong mossy dark shade of green
 }
 
-function helper:get_color(color)
+function color:get_color(color)
     return self.colors[color]
 end
 
-return helper
+return color
